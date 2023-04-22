@@ -1,0 +1,9 @@
+project:
+  output-dir: _docs
+
+website:
+  title: "metered"
+  site-url: "https://metered.github.io/metered-python"
+  description: ""
+  repo-branch: main
+  repo-url: "https://github.com/metered/metered-python"
