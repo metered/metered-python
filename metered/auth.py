@@ -18,13 +18,7 @@ from typing import IO, Generator, List, Optional, Tuple, Union
 # %% ../nbs/01_auth.ipynb 3
 _TOKEN_URL = "https://metered.dev/api/api_LByDlDSqYRZOFEEW/subscription"
 _TOKEN_ENV_VAR = 'METERED_API_KEY'
-_ASCII_LOGOTYPE = """
-                _                    _      _
- _ __ ___   ___| |_ ___ _ __ ___  __| |  __| | _____   __
-| '_ ` _ \ / _ \ __/ _ \ '__/ _ \/ _` | / _` |/ _ \ \ / /
-| | | | | |  __/ ||  __/ | |  __/ (_| || (_| |  __/\ V /
-|_| |_| |_|\___|\__\___|_|  \___|\__,_(_)__,_|\___| \_/
-    """
+
 
 NOTEBOOK_LOGIN_PASSWORD_HTML = """<center> <img
 src=https://metered.dev/assets/favicon-96x96.png
@@ -71,7 +65,7 @@ def _login(token: str) -> None:
     print(f"Your token has been saved to {_path_token}")
     print("Login successful")
 
-# %% ../nbs/01_auth.ipynb 6
+# %% ../nbs/01_auth.ipynb 5
 @contextmanager
 def _capture_output() -> Generator[StringIO, None, None]:
     """Capture output that is printed to terminal.
@@ -102,7 +96,6 @@ try:
 except NameError:
     _is_google_colab = False
 
-# %% ../nbs/01_auth.ipynb 7
 try:
     # Set to `True` if script is running in a Google Colab notebook.
     # If running in Google Colab, git credential store is set globally which makes the
@@ -121,7 +114,7 @@ def is_google_colab() -> bool:
     """
     return _is_google_colab
 
-# %% ../nbs/01_auth.ipynb 8
+# %% ../nbs/01_auth.ipynb 6
 def notebook_login() -> None:
     """
     Displays a widget to login to the HF website and store the token.
@@ -174,5 +167,4 @@ def notebook_login() -> None:
         login_token_widget.children = [widgets.Label(line) for line in message.split("\n") if line.strip()]
 
     token_finish_button.on_click(login_token_event)
-
 
