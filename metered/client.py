@@ -18,17 +18,18 @@ class GraphQLClient:
     query: str = None,
     variables: Dict[str, Any] = None,
   ) -> None:
+    self.api = api
     self.host = host if host else f"{api}.metered.app" if api else None
     self.path = path
     self.query = query
-    self.variables = variables or {}
+    self.variables = variables
 
   def __call__(self,
     api: str = None,
     host: str = None,
     path: str = None,
     query: str = None,
-    variables: Dict[str, Any] = {},
+    variables: Dict[str, Any] = None,
   ):
     if api or host or path or query or variables:
       return GraphQLClient(
@@ -41,7 +42,7 @@ class GraphQLClient:
 
     payload = {
       "query": self.query,
-      "variables": self.variables,
+      "variables": self.variables or {},
     }
 
     conn = http.client.HTTPSConnection(self.host)
