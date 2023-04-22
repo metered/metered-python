@@ -7,7 +7,6 @@ __all__ = ['GraphQLClient']
 import os
 import http.client
 import json
-from functools import partial as _partial
 from typing import Any, Dict
 
 # %% ../nbs/01_client.ipynb 4
@@ -16,7 +15,7 @@ class GraphQLClient:
     self._host = host
     self._path = path
 
-  def request(self, query: str, variables: Dict[Any]={}):
+  def request(self, query: str, variables: Dict[str, Any]={}):
     payload = {
       "query": query,
       "variables": variables,
