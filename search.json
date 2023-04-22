@@ -1,0 +1,44 @@
+[
+  {
+    "objectID": "core.html",
+    "href": "core.html",
+    "title": "core",
+    "section": "",
+    "text": "source\n\nfoo\n\n foo ()"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "metered",
+    "section": "",
+    "text": "This file will become your README and also the index of your documentation."
+  },
+  {
+    "objectID": "index.html#install",
+    "href": "index.html#install",
+    "title": "metered",
+    "section": "Install",
+    "text": "Install\npip install metered"
+  },
+  {
+    "objectID": "index.html#how-to-use",
+    "href": "index.html#how-to-use",
+    "title": "metered",
+    "section": "How to use",
+    "text": "How to use\nFill me in please! Don’t forget code examples:\n\n1+1\n\n2"
+  },
+  {
+    "objectID": "auth.html",
+    "href": "auth.html",
+    "title": "auth",
+    "section": "",
+    "text": "source\n\ndelete_token\n\n delete_token ()\n\n\nsource\n\n\nget_token\n\n get_token ()\n\n\nsource\n\n\nsave_token\n\n save_token (token:str)\n\n\nsource\n\n\nis_google_colab\n\n is_google_colab ()\n\nReturn True if code is executed in a Google colab.\nTaken from https://stackoverflow.com/a/63519730.\n\nsource\n\n\nnotebook_login\n\n notebook_login ()\n\nDisplays a widget to login to the HF website and store the token.\nThis is equivalent to [login] without passing a token when run in a notebook. [notebook_login] is useful if you want to force the use of the notebook widget instead of a prompt in the terminal.\nFor more details, see [login]."
+  },
+  {
+    "objectID": "client.html",
+    "href": "client.html",
+    "title": "client",
+    "section": "",
+    "text": "source\n\nGraphQLClient\n\n GraphQLClient (api:str=None, host:str=None, path:str='/', query:str=None,\n                variables:Dict[str,Any]=None)\n\nInitialize self. See help(type(self)) for accurate signature."
+  }
+]
