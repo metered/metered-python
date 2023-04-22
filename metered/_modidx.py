@@ -14,6 +14,6 @@ d = { 'settings': { 'branch': 'main',
                               'metered.auth.notebook_login': ('auth.html#notebook_login', 'metered/auth.py'),
                               'metered.auth.save_token': ('auth.html#save_token', 'metered/auth.py')},
             'metered.client': { 'metered.client.GraphQLClient': ('client.html#graphqlclient', 'metered/client.py'),
-                                'metered.client.GraphQLClient.__init__': ('client.html#graphqlclient.__init__', 'metered/client.py'),
-                                'metered.client.GraphQLClient.request': ('client.html#graphqlclient.request', 'metered/client.py')},
+                                'metered.client.GraphQLClient.__call__': ('client.html#graphqlclient.__call__', 'metered/client.py'),
+                                'metered.client.GraphQLClient.__init__': ('client.html#graphqlclient.__init__', 'metered/client.py')},
             'metered.core': {'metered.core.foo': ('core.html#foo', 'metered/core.py')}}}

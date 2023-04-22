@@ -15,7 +15,7 @@ class GraphQLClient:
     self._host = host
     self._path = path
 
-  def request(self, query: str, variables: Dict[str, Any]={}):
+  def __call__(self, query: str, variables: Dict[str, Any]={}, host: str = None, path: str = None):
     payload = {
       "query": query,
       "variables": variables,
